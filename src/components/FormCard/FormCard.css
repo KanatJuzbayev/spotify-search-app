@@ -1,0 +1,9 @@
+.form-card {
+  display: inline-block;
+  margin: 40px 40px 40px 0;
+  width: 300px;
+  padding: 10px 30px;
+  background: #f3f3f3;
+  box-shadow: -20px -20px 50px #ffffff, 20px 20px 50px #d2d2d2;
+  border-radius: 33px;
+}

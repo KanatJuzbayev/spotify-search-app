@@ -1,0 +1,106 @@
+.registration-form {
+  width: 600px;
+  padding: 30px 0;
+  background: #f3f3f3;
+  box-shadow: -20px -20px 50px #ffffff, 20px 20px 50px #d2d2d2;
+  border-radius: 33px;
+}
+
+label {
+  font-size: 20px;
+  line-height: 40px;
+  margin: auto;
+  display: block;
+  width: 450px;
+  margin-bottom: 10px;
+}
+
+.input {
+  display: block;
+  width: 450px;
+  font-size: 20px;
+  padding: 7px;
+}
+
+.inline {
+  width: 35px;
+  display: inline;
+}
+
+.submit {
+  width: 200px;
+  height: 45px;
+  margin: auto;
+  margin-top: 45px;
+  background-color: #2f8d46;
+  border-width: 0px;
+  border-radius: 7px;
+}
+
+.submit:hover {
+  cursor: pointer;
+}
+
+.submit:disabled {
+  cursor: default;
+}
+
+/* slider */
+
+.switch {
+  position: relative;
+  display: block;
+  /* width: 226px; */
+  height: 30px;
+  margin-top: 25px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 5;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+
+  top: 0;
+  left: 170px;
+  right: 224px;
+  bottom: 0;
+
+  background-color: #ccc;
+
+  transition: 0.2s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: '';
+  height: 22px;
+  width: 22px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.2s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2f8d46;
+}
+
+input:checked + .slider:before {
+  transform: translateX(25px);
+}
+
+/* errors */
+span.error {
+  display: inline-block;
+  height: 16px;
+  font-size: 17px;
+  color: red;
+  margin-bottom: 25px;
+}

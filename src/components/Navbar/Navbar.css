@@ -1,0 +1,19 @@
+header {
+  background-color: #444444;
+}
+
+nav a {
+  color: #fdfdfd;
+  text-decoration: none;
+  margin-right: 45px;
+  padding-bottom: 27px;
+}
+
+nav a:hover {
+  color: #2f8d46;
+}
+
+nav a.active {
+  color: #2f8d46;
+  border-bottom: 5px solid #2f8d46;
+}

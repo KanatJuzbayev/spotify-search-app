@@ -1,0 +1,97 @@
+.modal_wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.modal_wrapper.open {
+  height: 100%;
+  display: block;
+}
+
+.modal_wrapper.close {
+  height: 0;
+  display: none;
+}
+
+.close_card {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 14px;
+  height: 14px;
+  background-image: url(../../img/ico-close.svg);
+  border: none;
+  background-repeat: no-repeat;
+}
+
+.close_card:hover {
+  cursor: pointer;
+}
+
+.card {
+  position: relative;
+  max-width: 400px;
+  margin: auto;
+  background: white;
+  margin-top: 10%;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  padding: 40px 40px;
+}
+
+.track_image {
+  /* margin: auto; */
+  display: block;
+  max-width: 400px;
+}
+
+.card_content {
+  padding: 20px 95px 13px 0;
+}
+
+.track {
+  display: flex;
+  justify-content: space-between;
+}
+
+.track_name {
+  font-weight: bold;
+  margin: 0 0 10px;
+}
+.artists_name {
+  margin: 0 0 10px;
+}
+
+.album_name {
+  font-weight: bold;
+  margin: 0 0 10px;
+}
+
+.album_link {
+  text-decoration: none;
+  color: black;
+}
+
+.album_link:hover {
+  text-decoration: underline;
+  color: #2f8d46;
+}
+
+.icon__spotify {
+  background-image: url('../../img/icons-spotify.png');
+  background-size: contain;
+  display: inline-block;
+
+  content: '';
+  width: 24px;
+  height: 24px;
+}
+
+.track_duration {
+  margin: 0 0 10px;
+  color: #2f8d46;
+}

@@ -1,0 +1,19 @@
+.layout-4-column {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.layout-4-column > * {
+  flex-basis: 23%;
+}
+
+.layout-4-column:after {
+  content: '';
+  width: 23%;
+  display: block;
+}
+
+.cards-wrapper > * {
+  margin-bottom: 30px;
+}

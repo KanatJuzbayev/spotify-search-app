@@ -1,7 +1,7 @@
 import React from 'react';
 import './FormCard.css';
 
-import { FormData } from '../Form/Form';
+import { FormData } from 'types';
 
 interface FormCardProps {
   dataList: FormData;

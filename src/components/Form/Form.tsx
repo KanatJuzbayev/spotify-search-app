@@ -2,39 +2,19 @@ import React, { useState, useEffect } from 'react';
 import './Form.css';
 import { useForm } from 'react-hook-form';
 import FormCart from '../FormCard/FormCard';
-export const value = {
-  name: 'Kanat',
-  email: 'kanat.juzbayev@gmail.com',
-  birthday: '1989-04-26',
-  picture: 'Ava',
-  genre: 'Pop Music',
-  notifications: true,
-  consent: true,
-  id: 202210111405,
-};
+import { FormData } from 'types';
+import { value } from 'types';
+import { useAppDispatch, useAppSelector } from 'store/hooks';
+import { formActions } from 'store/formSlice';
 
 interface FormProps {
   onSubmit: (formData: FormData) => void;
 }
 
-export interface FormData {
-  name?: string;
-  email?: string;
-  birthday?: string;
-  picture?: [
-    {
-      name: string;
-    }
-  ];
-  genre?: string;
-  notifications?: boolean;
-  consent?: boolean;
-  id?: number;
-}
-
 export default function Home(props: FormProps) {
-  const [allFormData, setAllFormData] = useState<Array<FormData>>([]);
-  const [submitIsEnable, setSubmitIsEnable] = useState(true);
+  const dispatch = useAppDispatch();
+  const allFormData = useAppSelector((state) => state.form.allFormData);
+  const submitIsEnable = useAppSelector((state) => state.form.submitIsEnable);
 
   const {
     register,
@@ -53,15 +33,16 @@ export default function Home(props: FormProps) {
     }
   };
 
-  const submit = submitStatus();
+  const status = submitStatus();
 
   const onSubmit = (data: FormData) => {
     data.id = new Date().getTime();
-    setAllFormData([data, ...allFormData]);
+    dispatch(formActions.setFormData(data));
   };
 
   useEffect(() => {
-    setSubmitIsEnable(submit);
+    dispatch(formActions.setSubmitStatus(status));
+
     if (isSubmitSuccessful) {
       reset({
         name: '',

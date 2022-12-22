@@ -47,3 +47,29 @@ interface Items {
     name: string;
   };
 }
+
+export interface FormData {
+  name?: string;
+  email?: string;
+  birthday?: string;
+  picture?: [
+    {
+      name: string;
+    }
+  ];
+  genre?: string;
+  notifications?: boolean;
+  consent?: boolean;
+  id?: number;
+}
+
+export const value = {
+  name: 'Kanat',
+  email: 'kanat.juzbayev@gmail.com',
+  birthday: '1989-04-26',
+  picture: 'Ava',
+  genre: 'Pop Music',
+  notifications: true,
+  consent: true,
+  id: 202210111405,
+};

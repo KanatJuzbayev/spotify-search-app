@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { CardData } from 'types';
 import './Card.css';
 
@@ -21,9 +22,7 @@ export default function Card(props: CardProps) {
         <div className="card_content">
           <div className="track">
             <h4 className="track_name">{props.track.data.name}</h4>
-            <a href={props.track.data.uri}>
-              <span className="icon__spotify"></span>
-            </a>
+            <a className="icon__spotify" href={props.track.data.uri}></a>
           </div>
           <h5 className="artists_name">{props.track.data.artists.items[0].profile.name}</h5>
           <h5 className="album_name">

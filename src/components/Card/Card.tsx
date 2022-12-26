@@ -34,6 +34,8 @@ export default function Card(props: CardProps) {
             Album:{' '}
             <a
               onClick={(event) => event.stopPropagation()}
+              target={'_blank'}
+              rel="noreferrer"
               className="album_link"
               href={'https://open.spotify.com/album/' + props.track.data.albumOfTrack.uri.slice(14)}
             >

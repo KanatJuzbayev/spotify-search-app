@@ -8,8 +8,8 @@
 }
 
 .modal_wrapper.open {
-  height: 100%;
   display: block;
+  height: 100%;
 }
 
 .modal_wrapper.close {

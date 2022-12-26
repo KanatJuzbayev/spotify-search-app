@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './MiniCard.css';
 import Card from '../Card/Card';
 import { CardData } from 'types';
+
 interface MiniCardProps {
   track: CardData;
 }
@@ -37,7 +38,7 @@ export default function MiniCard(props: MiniCardProps) {
           </div>
         </div>
       </div>
-      <Card track={props.track} isOpen={cardOpen} close={closeCard} />
+      {cardOpen && <Card track={props.track} close={closeCard} />}
     </>
   );
 }

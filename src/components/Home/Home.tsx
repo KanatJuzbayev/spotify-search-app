@@ -1,6 +1,7 @@
 import React from 'react';
 import './Home.css';
 import SearchBar from '../SearchBar/SearchBar';
+import Card from 'components/Card/Card';
 
 export default function Home() {
   return (

@@ -61,6 +61,7 @@
 .track_name {
   font-weight: bold;
   margin: 0 0 10px;
+  width: 80%;
 }
 .artists_name {
   margin: 0 0 10px;
@@ -85,6 +86,7 @@
   background-image: url('../../img/icons-spotify.png');
   background-size: contain;
   display: inline-block;
+  background-repeat: no-repeat;
 
   content: '';
   width: 24px;
